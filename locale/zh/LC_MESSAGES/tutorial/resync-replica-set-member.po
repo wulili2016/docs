@@ -33,6 +33,9 @@ msgid ""
 "<replica-set-initial-sync>`."
 msgstr ""
 
+当slave权限节点复制进程同步失败，并且远远落后于primary 权限节点，primary 权限节点重复写覆盖oplog记录，而这些记录还没有被传输到 slave  ，slave不能跟上priamry的进度状态变成了state，
+当发生这种情况时，我们就不得不删除slave上的数据文件和 initial sync 来重新同步。
+
 # 432adf823544440484c774c72df0aab5
 #: ../source/tutorial/resync-replica-set-member.txt:20
 msgid ""
